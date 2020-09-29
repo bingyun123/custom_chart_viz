@@ -1,0 +1,21 @@
+{
+  "name": "spc",
+  "version": "1.0.0",
+  "description": "SPC visualization for splunk",
+  "main": "visualization.js",
+  "scripts": {
+    "build": "$SPLUNK_HOME/bin/splunk cmd node ./node_modules/webpack/bin/webpack.js",
+    "devbuild": "$SPLUNK_HOME/bin/splunk cmd node ./node_modules/webpack/bin/webpack.js --progress",
+    "watch": "$SPLUNK_HOME/bin/splunk cmd node ./node_modules/webpack/bin/webpack.js -d --watch --progress"
+  },
+  "author": "Yunfeng Zhang",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^1.12.6"
+  },
+  "dependencies": {
+    "echarts": "^4.9.0",
+    "jquery": "^3.5.1",
+    "underscore": "^1.11.0"
+  }
+}

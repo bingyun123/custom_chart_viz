@@ -1,0 +1,32 @@
+
+[]
+access = read : [ * ], write : [ admin, power ]
+export = none
+
+[tags]
+export = system
+
+
+[props]
+export = system
+
+
+[transforms]
+export = system
+
+
+[lookups]
+export = system
+
+
+[viewstates]
+access = read : [ * ], write : [ * ]
+export = system
+ 
+
+[visualizations/bingyun]
+export = system
+
+
+[views/sample] 
+modtime = 1600923539.173564000

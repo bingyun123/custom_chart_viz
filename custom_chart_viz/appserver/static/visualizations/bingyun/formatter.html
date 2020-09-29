@@ -1,0 +1,22 @@
+<form class="splunk-formatter-section" section-label="Data Series">
+    <splunk-control-group label="Data Type">
+        <splunk-select name="{{VIZ_NAMESPACE}}.dataType" value="Custom">
+            <option value="Custom">Custom</option> 
+            <option value="XBar_R-X">XBar R - X</option>
+        </splunk-select>
+    </splunk-control-group>
+    <splunk-control-group label="Option">
+        <splunk-text-area name="{{VIZ_NAMESPACE}}.option" value="{}">
+        </splunk-text-area>
+    </splunk-control-group>
+    <splunk-control-group label="xAxis Data Index Binding">
+        <splunk-text-input name="{{VIZ_NAMESPACE}}.xAxisDataIndexBinding" value="">
+        </splunk-text-input>
+    </splunk-control-group>
+    <splunk-control-group label="Series Data Index Binding">
+        <splunk-text-input name="{{VIZ_NAMESPACE}}.seriesDataIndexBinding" value="">
+        </splunk-text-input>
+    </splunk-control-group>
+</form>
+
+

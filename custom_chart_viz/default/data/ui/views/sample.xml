@@ -1,0 +1,91 @@
+<dashboard>
+  <label>Sample</label> 
+  <row>
+    <panel>
+      <viz type="custom_chart_viz.bingyun">
+        <search>
+          <query>source="spc.csv" 
+            | table no,UCL,LCL,Center,Data,"Out of Limits","Run of 7"
+			| sort no</query>
+          <earliest>$earliest$</earliest>
+          <latest>$latest$</latest>
+        </search>
+        <option name="drilldown">none</option>
+        <option name="refresh.display">progressbar</option>
+        <option name="custom_chart_viz.bingyun.dataType">Custom</option>
+        <option name="custom_chart_viz.bingyun.option">{ 
+                        legend: {
+                            y: 'bottom'
+                        },
+                        grid: {
+                            left: '1%',
+                            right: '1%',
+                            bottom: '5%',
+                            containLabel: true
+                        }, 
+                        toolbox: {
+                            feature: {
+                                saveAsImage: {}
+                            }
+                        },
+                        xAxis: {
+                            type: 'category',
+                            boundaryGap: false
+                        },
+                        yAxis: {
+                            type: 'value',
+                            scale: true,
+                            axisLine: { show: false }
+                        },
+                       
+                        series: [{ 
+                                type: 'line',
+                                showSymbol: false,
+                                lineStyle: {
+                                    type: 'dotted',
+                                    opacity: 0.7
+                                },
+                                symbol: 'none' 
+                            },
+                            { 
+                                type: 'line',
+                                showSymbol: false,
+                                lineStyle: {
+                                    type: 'dotted',
+                                    opacity: 0.7
+                                },
+                                symbol: 'none' 
+                            },
+                            { 
+                                type: 'bar',
+                                showSymbol: false,
+                                lineStyle: {
+                                    type: 'dotted',
+                                    opacity: 0.7
+                                },
+                                symbol: 'none' 
+                            }
+                        ]
+                }</option>
+        <option name="custom_chart_viz.bingyun.seriesDataIndexBinding">1,2,3</option>
+        <option name="custom_chart_viz.bingyun.xAxisDataIndexBinding">0</option>
+      </viz>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <viz type="custom_chart_viz.bingyun">
+        <search>
+          <query>source="spc.csv" 
+            | table no,UCL,LCL,Center,Data,"Out of Limits","Run of 7"
+            | sort no</query>
+          <earliest>$earliest$</earliest>
+          <latest>$latest$</latest>
+        </search>
+        <option name="drilldown">none</option>
+        <option name="refresh.display">progressbar</option>
+        <option name="custom_chart_viz.bingyun.dataType">XBar_R-X</option>
+      </viz>
+    </panel>
+  </row>
+</dashboard>

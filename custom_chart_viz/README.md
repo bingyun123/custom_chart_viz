@@ -48,8 +48,6 @@ Sample data can be found in the custom_chart_viz/lookups folder, add those data 
         ```
     * xAxis Data Index Binding -> Data index corresponding to the x-axis ,e.g.: 1
     * Series Data Index Binding -> Data index corresponding to the series , e.g.:1,2,3,4,5
-![](https://raw.githubusercontent.com/bingyun123/splunk_spc_echarts/master/_screenshot/2.png)
-![](https://raw.githubusercontent.com/bingyun123/splunk_spc_echarts/master/_screenshot/3.png)
 
 
 
@@ -59,6 +57,4 @@ Sample data can be found in the custom_chart_viz/lookups folder, add those data 
         source="spc.csv" 
         | table no,UCL,LCL,Center,Data,"Out of Limits","Run of 7"
         ```
-![](https://raw.githubusercontent.com/bingyun123/splunk_spc_echarts/master/_screenshot/1.png)
-![](https://raw.githubusercontent.com/bingyun123/splunk_spc_echarts/master/_screenshot/xbar_r_x.png)
 

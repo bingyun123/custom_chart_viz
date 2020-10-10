@@ -1,10 +1,10 @@
 # Custom Chart Viz
 Custom Chart Viz is built upon Apache ECharts library. It allows you to build a chart by custom option
 
-### Installation and Build
+### Installation 
 splunkbase:   https://splunkbase.splunk.com/app/5261/
 
-#### Development install
+#### Development Install and Build
 ```
 export SPLUNK_HOME
 cd $SPLUNK_HOME/etc/apps/custom_chart_viz/appserver/static/visualizations/custom_chart_viz

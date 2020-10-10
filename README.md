@@ -2,12 +2,7 @@
 Custom Chart Viz is built upon Apache ECharts library. It allows you to build a chart by custom option
 
 ### Installation and Build
-Custom Chart Viz for splunk using echarts
-To install the app:
-```
-_release/custom_chart_viz.tar.gz
-
-```
+splunkbase:   https://splunkbase.splunk.com/app/5261/
 
 #### Adjustment code needs to be install
 ```

@@ -4,7 +4,7 @@ Custom Chart Viz is built upon Apache ECharts library. It allows you to build a 
 ### Installation and Build
 splunkbase:   https://splunkbase.splunk.com/app/5261/
 
-#### Adjustment code needs to be install
+#### Development install
 ```
 export SPLUNK_HOME
 cd $SPLUNK_HOME/etc/apps/custom_chart_viz/appserver/static/visualizations/custom_chart_viz
@@ -21,7 +21,7 @@ Sample data can be found in the custom_chart_viz/lookups folder, add those data 
 #### Custom
     * SPL
         ```
-        source="spc.csv" 
+        | inputlookup spc.csv
         | table no,UCL,LCL,Center,Data,"Out of Limits","Run of 7"
         ```
     * Data Type -> Custom
@@ -68,7 +68,7 @@ Sample data can be found in the custom_chart_viz/lookups folder, add those data 
 #### XBar R - X
    * SPL
         ```
-        source="spc.csv" 
+        | inputlookup spc.csv
         | table no,UCL,LCL,Center,Data,"Out of Limits","Run of 7"
         ```
 ![](https://raw.githubusercontent.com/bingyun123/splunk_spc_echarts/master/_screenshot/1.png)

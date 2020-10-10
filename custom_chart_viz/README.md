@@ -9,7 +9,7 @@ Sample data can be found in the custom_chart_viz/lookups folder, add those data 
 #### Custom
     * SPL
         ```
-        source="spc.csv" 
+        | inputlookup spc.csv
         | table no,UCL,LCL,Center,Data,"Out of Limits","Run of 7"
         ```
     * Data Type -> Custom
@@ -54,7 +54,7 @@ Sample data can be found in the custom_chart_viz/lookups folder, add those data 
 #### XBar R - X
    * SPL
         ```
-        source="spc.csv" 
+        | inputlookup spc.csv
         | table no,UCL,LCL,Center,Data,"Out of Limits","Run of 7"
         ```
 

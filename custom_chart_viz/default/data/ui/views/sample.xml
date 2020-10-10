@@ -1,17 +1,15 @@
 <dashboard>
-  <label>Sample</label> 
+  <label>Sample</label>
   <row>
     <panel>
       <viz type="custom_chart_viz.bingyun">
         <search>
-          <query>source="spc.csv" 
+          <query>| inputlookup spc.csv
             | table no,UCL,LCL,Center,Data,"Out of Limits","Run of 7"
-			| sort no</query>
+            | sort no</query>
           <earliest>$earliest$</earliest>
           <latest>$latest$</latest>
         </search>
-        <option name="drilldown">none</option>
-        <option name="refresh.display">progressbar</option>
         <option name="custom_chart_viz.bingyun.dataType">Custom</option>
         <option name="custom_chart_viz.bingyun.option">{ 
                         legend: {
@@ -37,7 +35,7 @@
                             scale: true,
                             axisLine: { show: false }
                         },
-                       
+                       color: ['#0D4483', 'red', '#008000', '#008000', '#99CC00', 'yellow'],
                         series: [{ 
                                 type: 'line',
                                 showSymbol: false,
@@ -48,13 +46,9 @@
                                 symbol: 'none' 
                             },
                             { 
-                                type: 'line',
-                                showSymbol: false,
-                                lineStyle: {
-                                    type: 'dotted',
-                                    opacity: 0.7
-                                },
-                                symbol: 'none' 
+                                type: 'scatter',
+                                symbolSize: 15,
+                                z: 7 
                             },
                             { 
                                 type: 'bar',
@@ -67,8 +61,11 @@
                             }
                         ]
                 }</option>
-        <option name="custom_chart_viz.bingyun.seriesDataIndexBinding">1,2,3</option>
+        <option name="custom_chart_viz.bingyun.seriesDataIndexBinding">1,5,3</option>
         <option name="custom_chart_viz.bingyun.xAxisDataIndexBinding">0</option>
+        <option name="drilldown">none</option>
+        <option name="height">387</option>
+        <option name="refresh.display">progressbar</option>
       </viz>
     </panel>
   </row>
@@ -76,15 +73,16 @@
     <panel>
       <viz type="custom_chart_viz.bingyun">
         <search>
-          <query>source="spc.csv" 
+          <query>| inputlookup spc.csv
             | table no,UCL,LCL,Center,Data,"Out of Limits","Run of 7"
             | sort no</query>
           <earliest>$earliest$</earliest>
           <latest>$latest$</latest>
         </search>
-        <option name="drilldown">none</option>
-        <option name="refresh.display">progressbar</option>
         <option name="custom_chart_viz.bingyun.dataType">XBar_R-X</option>
+        <option name="drilldown">none</option>
+        <option name="height">325</option>
+        <option name="refresh.display">progressbar</option>
       </viz>
     </panel>
   </row>
